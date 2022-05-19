@@ -1,0 +1,8 @@
+{
+  "name": "gipago",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vgihan/gipago-talk.git",
+  "author": "vgihan <jum654@naver.com>",
+  "license": "MIT"
+}
