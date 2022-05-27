@@ -7,6 +7,7 @@ export class Component {
     this.props = props;
     this.setup();
     this.render();
+    this.componentDidMount();
   }
   setup() {}
   render() {
@@ -21,6 +22,7 @@ export class Component {
   mounted() {}
   setEvent() {}
   template() {}
+  componentDidMount() {}
 }
 
 export default Component;
