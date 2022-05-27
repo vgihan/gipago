@@ -1,0 +1,145 @@
+@media (max-width: 1250px) {
+  .page > div:nth-child(1) {
+    clear: left;
+  }
+  .page > div:nth-child(2) {
+    clear: left;
+  }
+}
+@font-face {
+  font-family: "ubuntu-light";
+  src: url("../font/Ubuntu-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "gowun-regular";
+  src: url("../font/GowunDodum-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 74px;
+  box-shadow: 0 1px 0 0 #ddd;
+  padding: 0 100px;
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 0 0;
+  }
+  .page > div {
+    width: 80vw;
+  }
+}
+header > .logo {
+  height: 100%;
+  width: auto;
+  font-size: 30px;
+  line-height: 74px;
+}
+header > nav {
+  line-height: 74px;
+}
+header > nav > a {
+  margin: 0 10px;
+}
+article {
+  text-align: center;
+}
+footer {
+  height: 60px;
+  text-align: center;
+  width: 100%;
+}
+footer > a {
+  line-height: 60px;
+  font-size: 12px;
+  color: gray;
+}
+#root {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.logo > a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ddd;
+}
+.container_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.container_title > p {
+  display: inline-block;
+  font-family: "gowun-regular";
+  font-size: 20px;
+  color: #aaa;
+  vertical-align: middle;
+}
+.container_content {
+  height: 70%;
+}
+.container_content > textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.translated {
+  text-align: start;
+  padding: 20px;
+  font-size: 14px;
+}
+.container_footer {
+  text-align: end;
+  height: 17%;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.page {
+  display: inline-block;
+}
+.page > div:nth-child(1) {
+  float: left;
+  margin: 50px 10px 0 0;
+}
+.page > div:nth-child(2) {
+  float: left;
+  margin: 50px 0 10px 0;
+}
+.web_cam {
+  width: 100%;
+  height: 100%;
+}
+.translate_btn {
+  width: auto;
+  height: 100%;
+  padding: 0 20px;
+  background-color: #21dc6d;
+  color: white;
+  font-family: "gowun-regular";
+  font-weight: bold;
+  font-size: 20px;
+}
+.ubuntu {
+  font-family: "ubuntu-light";
+}
+.gowun {
+  font-family: "gowun-regular";
+}
