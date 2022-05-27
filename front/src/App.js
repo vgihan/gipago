@@ -19,7 +19,7 @@ class App extends Component {
     </footer>`;
   }
   setEvent() {
-    const $anchors = this.$parent.querySelectorAll("header > nav");
+    const $anchors = this.$parent.querySelectorAll("header > nav > a");
     const $article = this.$parent.querySelector("article");
 
     new Router($article, { path: location.pathname });
@@ -27,6 +27,7 @@ class App extends Component {
     $anchors.forEach(($anchor) => {
       $anchor.addEventListener("click", (e) => {
         e.preventDefault();
+        history.pushState({}, "", e.currentTarget.href);
         new Router($article, { path: location.pathname });
       });
     });
