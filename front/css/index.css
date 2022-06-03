@@ -61,6 +61,9 @@ footer > a {
   font-size: 12px;
   color: gray;
 }
+footer > a::before {
+  content: "© ";
+}
 #root {
   top: 0;
   bottom: 0;
@@ -106,6 +109,7 @@ footer > a {
   text-align: start;
   padding: 20px;
   font-size: 14px;
+  line-height: 18px;
 }
 .container_footer {
   text-align: end;
@@ -122,6 +126,23 @@ footer > a {
 .page > div:nth-child(2) {
   float: left;
   margin: 50px 0 10px 0;
+}
+.output > .container_content {
+  overflow-y: auto;
+}
+.file_drop_target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  font-family: "gowun-regular";
+  font-size: 14px;
+  color: #afafaf;
+}
+input[type="file"] {
+  display: none;
 }
 .web_cam {
   width: 100%;

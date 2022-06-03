@@ -15,7 +15,7 @@ class App extends Component {
     </header>
     <article></article>
     <footer>
-      <a href="https://github.com/vgihan">&copy; made by vgihan</a>
+      <a href="https://github.com/vgihan">made by vgihan</a>
     </footer>`;
   }
   setEvent() {
