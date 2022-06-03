@@ -11,23 +11,22 @@ class WordPage extends Component {
   }
   template() {
     return `<section class="word_page page">
-      <div class="input container">
-        ${Container({
-          title: "Word",
-          children:
-            "<textarea placeholder='번역할 문장을 입력하세요.'></textarea>",
-          footer: "<button class='translate_btn'>번역하기</button>",
-        })}
-      </div>
-      <div class="output container"></div>
+      <ul>
+        <li class="input container">
+          ${Container({
+            title: "Word",
+            children: "<textarea placeholder='번역할 문장을 입력하세요.'></textarea>",
+            footer: "<button class='translate_btn'>번역하기</button>",
+          })}
+        </li>
+        <li class="output container"></li>
+      </ul>
     </section>`;
   }
   setEvent() {
     const debounce = useDebounce();
 
-    const $textarea = this.$parent.querySelector(
-      ".container_content > textarea"
-    );
+    const $textarea = this.$parent.querySelector(".container_content > textarea");
 
     $textarea.addEventListener("keyup", (e) => {
       this.word = e.currentTarget.value;

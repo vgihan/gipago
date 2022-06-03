@@ -11,14 +11,16 @@ class PicturePage extends Component {
   }
   template() {
     return `<section class="word_page page">
-      <div class="input container">
-        ${Container({
-          title: "Video",
-          children: "<video class='web_cam' autoplay />",
-          footer: "<button class='translate_btn'>번역하기</button>",
-        })}
-      </div>
-      <div class="output container"></div>
+      <ul>
+        <li class="input container">
+          ${Container({
+            title: "Video",
+            children: "<video class='web_cam' autoplay />",
+            footer: "<button class='translate_btn'>번역하기</button>",
+          })}
+        </li>
+        <li class="output container"></li>
+      </ul>
     </section>`;
   }
   setEvent() {
@@ -33,9 +35,7 @@ class PicturePage extends Component {
     };
     const handleTranslate = async () => {
       const ocrData = await getOcr();
-      const sentence = ocrData.result
-        .map(({ recognition_words }) => recognition_words)
-        .join(" ");
+      const sentence = ocrData.result.map(({ recognition_words }) => recognition_words).join(" ");
       const translatedData = await translate(sentence, "en", "kr");
       this.translated = translatedData.translated_text[0];
       this.mounted();

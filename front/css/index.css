@@ -1,8 +1,8 @@
 @media (max-width: 1250px) {
-  .page > div:nth-child(1) {
+  .page > ul > li:nth-child(1) {
     clear: left;
   }
-  .page > div:nth-child(2) {
+  .page > ul > li:nth-child(2) {
     clear: left;
   }
 }
@@ -92,6 +92,10 @@ footer > a::before {
   color: #aaa;
   vertical-align: middle;
 }
+.container_title > p::selection {
+  background-color: #afafaf;
+  color: white;
+}
 .container_content {
   height: 70%;
 }
@@ -105,11 +109,19 @@ footer > a::before {
   box-sizing: border-box;
   font-size: 14px;
 }
+.container_content > textarea::selection {
+  background-color: #afafaf;
+  color: white;
+}
 .translated {
   text-align: start;
   padding: 20px;
   font-size: 14px;
   line-height: 18px;
+}
+.translated::selection {
+  background-color: #afafaf;
+  color: white;
 }
 .container_footer {
   text-align: end;
@@ -119,11 +131,11 @@ footer > a::before {
 .page {
   display: inline-block;
 }
-.page > div:nth-child(1) {
+.page > ul > li:nth-child(1) {
   float: left;
   margin: 50px 10px 0 0;
 }
-.page > div:nth-child(2) {
+.page > ul > li:nth-child(2) {
   float: left;
   margin: 50px 0 10px 0;
 }
@@ -157,6 +169,10 @@ input[type="file"] {
   font-family: "gowun-regular";
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
+}
+.translate_btn:hover {
+  opacity: 0.5;
 }
 .ubuntu {
   font-family: "ubuntu-light";
