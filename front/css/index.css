@@ -32,7 +32,7 @@ header {
     height: auto;
     padding: 0 0;
   }
-  .page > div {
+  .page > ul > li {
     width: 80vw;
   }
 }
