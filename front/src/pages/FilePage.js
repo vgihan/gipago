@@ -37,7 +37,10 @@ class FilePage extends Component {
       $dropTarget.style.cssText = "";
       const ocrData = await ocr(e.dataTransfer.files[0]);
       const sentence = ocrData.result.map(({ recognition_words }) => recognition_words).join(" ");
-      const translatedData = await translate(sentence, "en", "kr");
+      const reg = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+      const isKR = reg.test(sentence);
+      const params = [isKR ? "kr" : "en", isKR ? "en" : "kr"];
+      const translatedData = await translate(sentence, ...params);
       this.translated = translatedData.translated_text[0];
       this.mounted();
     });

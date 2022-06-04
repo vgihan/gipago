@@ -36,7 +36,10 @@ class PicturePage extends Component {
     const handleTranslate = async () => {
       const ocrData = await getOcr();
       const sentence = ocrData.result.map(({ recognition_words }) => recognition_words).join(" ");
-      const translatedData = await translate(sentence, "en", "kr");
+      const reg = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+      const isKR = reg.test(sentence);
+      const params = [isKR ? "kr" : "en", isKR ? "en" : "kr"];
+      const translatedData = await translate(sentence, ...params);
       this.translated = translatedData.translated_text[0];
       this.mounted();
     };

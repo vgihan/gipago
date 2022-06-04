@@ -32,7 +32,10 @@ class WordPage extends Component {
       this.word = e.currentTarget.value;
       debounce(async () => {
         if (this.word) {
-          const data = await translate(this.word, "en", "kr");
+          const reg = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+          const isKR = reg.test(this.word);
+          const params = [isKR ? "kr" : "en", isKR ? "en" : "kr"];
+          const data = await translate(this.word, ...params);
           this.translated = data.translated_text[0];
         } else {
           this.translated = "";
