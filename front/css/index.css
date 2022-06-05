@@ -118,6 +118,9 @@ footer > a::before {
   padding: 20px;
   font-size: 14px;
   line-height: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 .translated::selection {
   background-color: #afafaf;
