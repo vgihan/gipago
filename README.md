@@ -10,10 +10,6 @@
 
 HTML, CSS, 순수 JavaScript만을 이용한 프로젝트입니다. kakao OCR API와 kakao Translate API를 이용하였습니다.
 
-## 배포 링크
-
-[GIPAGO](https://gipago.kro.kr/)
-
 ## 실행 방법
 
 ```
